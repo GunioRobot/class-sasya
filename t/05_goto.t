@@ -25,7 +25,7 @@ use Test::More 'no_plan';
     use Class::Sasya;
 
     has stash => (is => 'rw', default => sub { '' });
-    
+
     hooks qw/
         1
         2

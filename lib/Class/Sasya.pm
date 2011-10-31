@@ -100,12 +100,12 @@ sub export_for {
         $self->_root->initiate_scanning($self, $callback_sub, @args);
         return $self;
     }
-    
+
     sub find_hook {
         my $class = shift;
         return $class->_root->find_by_path(@_);
     }
-    
+
     sub add_hook {
         my ($class, $name, $callback) = @_;
         if (my $hook = $class->find_hook($name)) {
@@ -149,7 +149,7 @@ is woven delicately, and is very delicious.
 
  package Salute;
  use Class::Sasya; # automatically turns on strict and warnings (Mouse base, not Any::Moose)
- 
+
  # The flow of event with hook is defined
  hooks
      'initialize'
@@ -160,7 +160,7 @@ is woven delicately, and is very delicious.
      /],
      'finalize',
  ;
- 
+
  # Modules that namespace corresponds to Salute::Plugin::* is loaded
  plugins
      namespace => [qw/ +Plugin::* /],
@@ -189,7 +189,7 @@ is woven delicately, and is very delicious.
 
 =head2 traversal_handler
 
-=head1 
+=head1
 
 =head1 AUTHOR
 
